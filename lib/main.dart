@@ -1,4 +1,5 @@
 import 'package:chat_app/Screens/loginscreen.dart';
+import 'package:chat_app/Screens/registerscreen.dart';
 import 'package:chat_app/Theme/light_mode.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: lightmode,
-      home: const LoginScreen(),
+      home: const RegisterScreen(),
     );
   }
 }

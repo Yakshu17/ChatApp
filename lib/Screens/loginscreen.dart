@@ -42,24 +42,13 @@ void login(){
 
             const SizedBox(height: 25,),
             
- Row(
+ const Row(
    mainAxisAlignment:MainAxisAlignment.center,
    children: [
      Text("Not a member?"),
-     Text("Register Now",style: TextStyle(fontWeight: FontWeight.bold),),
+     Text(" Register Now",style: TextStyle(fontWeight: FontWeight.bold),),
    ],
  ),
-
-
-
-
-
-
-
-
-
-
-
           ],
         ),
       ),
