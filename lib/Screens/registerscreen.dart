@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
-
 import '../components/mybutton.dart';
 import '../components/mytextfield.dart';
 
-class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+   RegisterScreen({super.key,required this.onTap});
 
-  @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
-}
-
-class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _emailcontroller = TextEditingController();
   final TextEditingController _passcontroller = TextEditingController();
   final TextEditingController _confirmpasscontroller = TextEditingController();
-  void register() {}
+   void Function()? onTap;
+   void register(){}
 
   @override
   Widget build(BuildContext context) {
@@ -68,13 +63,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
             const SizedBox(
               height: 25,
             ),
-            const Row(
+             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have an account?"),
-                Text(
-                  " Login Now",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                const Text("Already have an account?"),
+                GestureDetector(
+                  onTap: onTap,
+                  child: const Text(
+                    " Login Now",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
               ],
             ),
